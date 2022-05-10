@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>실행 컨텍스트</title>
+</head>
+<body>
+ <script>   
+   function increase(){
+       var count = 0;
+       function add(){
+        console.log(++count);
+       }
+       return add;
+   }
+
+   var test = increase();
+   test();
+   test();
+   test();
+   test();
+   test();
+   
+ </script>
+</body>
+</html>

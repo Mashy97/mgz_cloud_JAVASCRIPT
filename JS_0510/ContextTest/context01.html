@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>실행 컨텍스트</title>
+</head>
+<body>
+ <script>   
+    var str01 = 'JavaScript';
+    var str02 = 'Java';
+    function hello() {
+        var str03 ='Hi, ';
+        function hi(){
+            var str04 ='Hi, '; 
+
+            console.log('str01 : ',str01);
+            console.log('str02 : ',str02);
+            console.log('str03 : ',str03);
+            console.log('str04 : ',str04);
+        }
+        hi();
+    }
+    hello();
+
+ </script>
+</body>
+</html>

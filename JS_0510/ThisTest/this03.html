@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this binding</title>
+</head>
+<body>
+ <script>   
+    function print(result){
+        console.log('result :',result);
+    }
+        function add(a,b,func){
+            func(a+b);
+        };
+
+        add(1,2,print);
+ </script>
+</body>
+</html>

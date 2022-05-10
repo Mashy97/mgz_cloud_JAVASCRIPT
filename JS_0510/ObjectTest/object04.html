@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>사용자 정의 객체</title>
+</head>
+<body>
+ <script>   
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+        this.getName = function(){
+            return this.name;
+        }
+        this.setName = function(name){
+            this.name = name;
+        }
+    }
+    const p1 = new Person("일길동", 10);
+    
+    console.log(toString.call(p1));
+    p1.setName('홍길동');
+    // console.log('name : ',p1.name);
+    // console.log('age : ',p1.age);
+
+    const p2 = new Person('이길동',20);
+    // console.log('name : ',p2.name);
+    // console.log('age : ',p2.age);
+    console.log(p1.getName());
+    console.log(p2.getName());
+
+
+ </script>
+</body>
+</html>
