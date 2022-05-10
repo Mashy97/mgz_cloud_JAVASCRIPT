@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>콜백 함수</title>
+</head>
+<body>
+    <script>   
+        function repeat01(n){
+            for (let i =1; i<=n;i++){
+                console.log(i);          
+              }
+        }
+
+        function repeat02(n){
+            for (let i =1; i<=n;i+=2){
+                console.log(i);          
+              }
+        }
+
+        function repeat(n, func){
+           console.log(typeof n);
+           console.log(typeof func);
+           console.log(toString.call(func));
+            func(n);
+        }
+
+        repeat(10, repeat02);
+    </script>
+</body>
+</html>

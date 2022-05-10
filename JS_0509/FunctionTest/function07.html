@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>즉시 실행 함수</title>
+</head>
+<body>
+    <script>   
+
+       const add = (function(x,y) {
+        x = x||0;
+        y = y||0;
+        console.log('x : ',x);
+        console.log('y : ',y);
+           return x+y;
+       })(5,10);
+
+
+       console.log(add);
+    </script>
+</body>
+</html>

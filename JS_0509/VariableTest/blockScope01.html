@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>블록 스코프</title>
+</head>
+<body>
+ <script>   
+    var str01 = "First";
+    {
+     var str02 = "Second";
+
+     console.log(str01);
+     console.log(str02);
+    }
+        console.log(str01);
+        console.log(str02);
+ </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>중첩 함수</title>
+</head>
+<body>
+    <script>  
+    function outer(){
+        var str01 = 'First';
+
+        function inner(){
+            var str02 = 'Second';
+            console.log('str01 : ',str01);
+            console.log('str02 : ',str02);
+
+        }
+           return inner;
+    }
+    var innerFunc = outer();
+    innerFunc();
+
+    console.log(typeof innerFunc);
+    console.log(toString.call(innerFunc));
+
+    // outer();
+
+    </script>
+</body>
+</html>

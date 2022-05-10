@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>함수 스코프</title>
+</head>
+<body>
+    <script>   
+        var str01 = 'First';
+
+        function hello(){
+            var str02 = undefined;
+
+            str02 = 'Second';
+            console.log('str02 : ',str02);
+        }
+
+        hello();
+        console.log('str02 : ',str02);
+
+    </script>
+</body>
+</html>
