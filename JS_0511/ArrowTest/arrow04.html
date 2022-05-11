@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function</title>
+</head>
+    <body>  
+        <script>   
+    var obj = {
+        name: '일길동',
+        print: () =>{
+            const func = () =>{
+                console.log(`this : ${this}`);
+            }
+            func();
+        }
+    }
+    obj.print();
+        </script>
+    </body>
+</html>

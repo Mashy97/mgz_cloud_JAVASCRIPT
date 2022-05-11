@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>내장 객체 Array</title>
+</head>
+<body>
+    <script>
+        const intarr = [1,2,3,4,5];
+
+        const result = intarr.reduce((preValue,currValue,index)=> {
+            console.log(`preValue : ${preValue}`);
+            console.log(`currValue : ${currValue}`);
+            console.log(`index : ${index}`);
+            preValue*=currValue;
+            return preValue;
+        }, 1);
+
+        console.log(`result : ${result}`);
+    </script>
+</body>
+</html>

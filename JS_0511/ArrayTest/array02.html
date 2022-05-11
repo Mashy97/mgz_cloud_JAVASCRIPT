@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>내장 객체 Array</title>
+</head>
+<body>
+    <script>   
+            const colors= ['red', 'green','blue'];
+            
+            colors.push('black');
+            colors.push('pink');
+
+            // colors.forEach(function(element, index,arr){
+            //     console.log(`element : ${element}`);
+            //     console.log(`element : ${index}`);
+            //     console.log(`element : ${arr}`);
+            // });
+            colors.pop();
+            colors.shift();
+
+            colors.forEach((element) => {
+                console.log(`element : ${element}`);
+                // console.log(`element : ${index}`);
+            });
+
+
+    </script>
+</body>
+</html>

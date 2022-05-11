@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function</title>
+</head>
+    <body>  
+        <script>   
+    function outer(){
+        console.log(`outer this : ${this}`);
+        var inner= ()=> {
+            console.log(`inner this : ${this}`);
+        }
+        inner();
+    }
+    outer();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>내장 객체 String</title>
+</head>
+<body>
+    <script>   
+        const str = 'Hello, JavaScript!!';
+
+        console.log(toString.call(str));
+
+        console.log('문자열의 길이 : ',str.length);
+
+        console.log('H 인덱스 : ', str.indexOf('H'));
+        console.log('a 인덱스 : ', str.indexOf('a'));
+        console.log('a 인덱스 : ', str.lastIndexOf('a'));
+        console.log('J 인덱스 : ', str.lastIndexOf('J'));
+        console.log(str.substring(7,11));
+        console.log(str.slice(7,11));
+        console.log(str.substr(7,4));
+
+        console.log(str.substring(-1,4));
+        console.log(str.slice(-1,4));
+
+        var data = '2022-05-11';
+        var arr = data.split    ('-');
+
+        console.log('Year   : ',arr[0]);
+        console.log('Month  : ',arr[1]);
+        console.log('Date   : ',arr[2]);
+
+        var str01 = '       Java Script     ';
+        console.log(str01.trim());
+        console.log(str01.length);
+        console.log(str01.trim().length);
+
+
+        var str02 = 'a';
+        console.log(str02.padStart(10,'*'));
+        console.log(str02.padEnd(10,'*'));
+
+    </script>
+</body>
+</html>

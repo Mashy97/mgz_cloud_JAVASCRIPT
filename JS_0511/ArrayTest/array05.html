@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>내장 객체 Array</title>
+</head>
+<body>
+    <script>   
+        const arr01 = ['banana','apple','grape'];
+        const arr02 = ['kiwi','peach'];
+        const arr03 = ['strawberry'];
+        const arr = arr01.concat(arr02,arr03);
+
+        arr.forEach((element) => console.log(element));
+        
+        const index = arr02.indexOf('apple');
+        console.log(`index : ${index}`);
+    
+    </script>
+</body>
+</html>

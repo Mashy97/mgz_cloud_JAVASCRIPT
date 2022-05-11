@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>내장 객체 Array</title>
+</head>
+<body>
+    <script>
+       const arr =[
+           {firstName: '길동', lastName: '일', age: 10},
+           {firstName: '길동', lastName: '이', age: 20},
+           {firstName: '길동', lastName: '삼', age: 30},
+           {firstName: '길동', lastName: '사', age: 40},
+           {firstName: '길동', lastName: '오', age: 50}
+       ];
+      const result = arr.filter((p)=>{
+        if(p.age >= 30){
+            return true;
+        }
+        return false;
+       });
+
+       console.log(`${toString.call(result)}`);
+
+       result.forEach((obj) => {
+           console.log(`firstName : ${obj.firstName}`);
+           console.log(`lastName : ${obj.lasstName}`);
+           console.log(`age : ${obj.age}`);
+       })
+    </script>
+</body>
+</html>
