@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FileUpload</title>
+</head>
+<body>
+    <form action="upload.jsp" method="post" enctype="multipart/form-data">
+      <input type="file" name="upload" id="upload">
+      <button type="submit">전송</button>
+    </form>
+
+    <script>
+
+        const upload = document.getElementById('upload');
+
+        upload.addEventListener('change', function(){
+                console.log(`this : ${this}`);
+                console.log(`files : ${this.files[0]}`);
+                console.log(`fileName : ${this.files[0].name}`);
+                console.log(`fileName : ${this.files[0].size}`);
+        });
+
+
+
+
+    </script>
+</body>
+</html>

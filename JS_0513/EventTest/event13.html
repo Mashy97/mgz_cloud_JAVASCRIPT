@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event 위임</title>
+</head>
+<body>
+    <ul id="colors">
+        <li id="li01">Red</li>
+        <li id="li02">Green</li>
+        <li id="li03">Blue</li>
+
+    </ul>
+    <script>
+        const li01 = document.getElementById('li01');
+        li01.addEventListener('click',function(){
+            this.style.color = 'red';
+           
+            // if(this.style.color == 'red'){
+            //     this.style.color ='black';
+            // }else{
+            //     this.style.color = 'red';
+            // }
+        });
+
+        const li02 = document.getElementById('li02');
+        li02.addEventListener('click',function(){
+            this.style.color = 'green';
+        });
+        const li03 = document.getElementById('li03');
+        li03.addEventListener('click',function(){
+            this.style.color = 'blue';
+        });
+    </script>
+</body>
+</html>

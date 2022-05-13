@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+</head>
+<body>
+    <ul id="colors">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Pink</li>
+        <li>Purple</li>
+    </ul>
+    <script>
+        const ulElement = document.getElementById('colors');
+
+        ulElement.addEventListener('click', function(e){
+            console.log(`target: ${e.target.tagName}`);
+            console.log(`currentTarget: ${e.currentTarget.tagName}`);
+            console.log(`${this} === ${e.currentTarget}`);
+            console.log(`${this} === ${e.target}`);
+            // e.target.style.color = 'red';
+            e.currentTarget.style.color = 'blue';
+        });
+    </script>
+</body>
+</html>

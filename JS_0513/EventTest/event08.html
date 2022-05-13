@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <style>
+        #div{
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            margin-bottom: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+
+   <div id="div"></div>
+   <div id="showPoint"></div>
+   <br>
+   <button id="btn">이벤트 삭제</button>
+    <script>
+        const div = document.getElementById('div');
+        const showPoint = document.getElementById('showPoint');
+        const btn = document.getElementById('btn');
+
+        const listener = function(e){
+            console.log(`${toString.call(e)}`);
+            showPoint.innerText = `x : ${e.offsetX}, y : ${e.offsetY}`;
+        }
+
+        div.addEventListener('mousemove', listener);
+
+        btn.addEventListener('click', function(){
+            div.removeEventListener('mousemove', listener);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+</head>
+<body>
+    <ul id="colors">
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Pink</li>
+        <li>Purple</li>
+    </ul>
+    <script>
+        const ulElement = document.getElementById('colors');
+
+        ulElement.addEventListener('click',(e) => {
+            console.log(`this : ${this}`);
+            console.log(`this : ${e.target}`);
+            console.log(`this : ${e.currentTarget}`);
+        });
+    </script>
+</body>
+</html>

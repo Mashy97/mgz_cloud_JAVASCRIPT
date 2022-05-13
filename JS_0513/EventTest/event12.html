@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="login.jps" method="get">
+        아이디   : <input type="text" name="userId" id="userId"><br>
+        비밀번호 : <input type="password" name="pwd" id="pwd"><br>
+        <button type="button" id="btn">로그인</button>
+    </form>
+
+    <script>
+    
+        const btn = document.getElementById('btn'); 
+
+
+        btn.addEventListener('click', function(){
+            const userId = document.getElementById('userId').value;
+            const pwd = document.getElementById('pwd').value;
+
+            console.log(`userId : ${userId.length}`);
+            console.log(`pwd : ${pwd.length}`);
+
+            if(userId.trim() == ''|| pwd.trim() == ''){
+                alert('아이디와 패스워드를 정확히 입력하세요.');
+                return;
+            }
+
+            const form = document.getElementById('form');
+            form.action - 'login.jps';
+            form.submit();
+
+        })
+    </script>
+</body>
+</html>

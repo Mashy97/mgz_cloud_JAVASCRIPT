@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 이벤트 동작 제어</title>
+</head>
+<body>
+    <a href="https://www.google.com">google</a>
+    <script>
+        const aElement = document.querySelector('body > a');
+       
+        aElement.addEventListener('click',function(e){
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html>

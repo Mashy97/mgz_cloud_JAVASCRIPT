@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FileUpload</title>
+    <style>
+        .dropzone{
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            margin-top: 50px;
+            text-align: center;
+            line-height: 400px;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form action="upload.jsp" method="post" enctype="multipart/form-data">
+      <input type="file" name="upload" id="upload" multiple>
+        <div class="dropzone">Drag additional files</div>
+        <div id="fileList"></div>
+    </form>
+
+    <script>
+        const file = document.getElementById('upload');
+        const fileList = document.getElementById('fileList');
+        const dropzone = document.querySelector('.dropzone');
+
+
+        dropzone.addEventListener('drop', function(e){
+            e.stopPropagation();
+            e.preventDefault();
+            // console.log(`drop event : ${toString.call(e)}`);
+            // console.log(`dataTransfer : ${toString.call(e.dataTransfer)}`);
+            const arr = Array.from(e.dataTransfer.files);
+
+            let htmlStr = '';
+            arr.forEach((f)=> {
+                htmlStr += `<p>${f.name}</p>`;
+            });
+            fileList.innerHTML = htmlStr;
+            file.files = e.dataTransfer.files;
+        });
+
+        dropzone.addEventListener('dragover', function(e){
+            e.stopPropagation();
+            e.preventDefault();
+            // console.log(`drop event : ${toString.call(e)}`);
+            // console.log(`dataTransfer : ${toString.call(e.dataTransfer)}`);
+        });
+    </script>
+</body>
+</html>

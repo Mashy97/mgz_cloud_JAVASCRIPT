@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event 위임</title>
+</head>
+<body>
+    <ul id="colors">
+        <li id="li01">Red</li>
+        <li id="li02">Green</li>
+        <li id="li03">Blue</li>
+
+    </ul>
+    <script>
+      const ul = document.getElementById('colors');
+
+      ul.addEventListener('click',function(e){
+        //   console.log(`id : ${e.target.id}`);
+        //   console.log(`tagName : ${e.target.tagName}`);
+
+          if(e.target.id == 'li01'){
+              e.target.style.color = 'red';
+          } else if(e.target.id == 'li02') {
+            e.target.style.color = 'green';
+          } else if(e.target.id == 'li03'){
+            e.target.style.color = 'blue';
+            e.target.style.fontStyle = 'italic';
+          }
+
+      });
+    </script>
+</body>
+</html>

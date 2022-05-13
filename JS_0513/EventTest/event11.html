@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 이벤트 동작 제어</title>
+</head>
+<body>
+    <form action ="login.jsp" method="get">
+        아이디   : <input type="text" name="userID"><br>
+        비밀번호 : <input type="password" name="pwd"><br>
+        <button type="submit">로그인</button>
+
+    </form>
+
+    <script>
+        document.addEventListener('keypress',function(e){
+            console.log(`type : ${toString.call(e)}`);
+            if(e.keyCode == 13){
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

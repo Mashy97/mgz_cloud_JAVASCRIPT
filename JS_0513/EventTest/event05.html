@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+</head>
+<body>
+    
+    <button id="btn" type="button">Hello</button>
+    
+    <script>
+        const btn = document.getElementById('btn');
+        // btn.onclick = function() {
+        //     alert('Hello!!');
+        // }
+
+        // btn.addEventListener('click', () => {
+        //     alert('Hello!!');
+        // });
+       
+        btn.addEventListener('click', function(e){
+           console.log(`type : ${e.type}`);
+           console.log(`target : ${e.target}`);
+           console.log(`currentTarget : ${e.currentTarget}`);
+        });
+
+  
+    </script>
+</body>
+</html>
